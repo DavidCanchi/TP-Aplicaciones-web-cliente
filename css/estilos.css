@@ -123,3 +123,10 @@ footer {
   color: #ff6600;
 }
 
+#mensaje-exito {
+  color: green;
+  display: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
