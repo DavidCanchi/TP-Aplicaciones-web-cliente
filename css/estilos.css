@@ -130,3 +130,29 @@ footer {
   margin-top: 10px;
 }
 
+#descripcion {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.marcas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.marca-item {
+  width: 100px;
+  height: auto;
+  text-align: center;
+}
+
+.marca-item img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
