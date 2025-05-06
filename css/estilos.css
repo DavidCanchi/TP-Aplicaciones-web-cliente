@@ -137,7 +137,7 @@ footer {
   text-align: center;
 }
 
-.marcas {
+/*.marcas {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -155,4 +155,25 @@ footer {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+}*/
+
+.productosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.marcas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.marca-item img {
+  width: 100%;
+  max-width: 120px;
 }
