@@ -92,3 +92,13 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+
+.banner {
+  background-image: url("../img/fondoIndex.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+}
