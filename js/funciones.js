@@ -16,3 +16,6 @@ function validarFormulario() {
     document.getElementById('formulario').reset(); 
     return false;
   }
+
+  ////////////////////////////////////////////////////////////////
+

@@ -16,6 +16,10 @@
       <a href="../pages/ofertas.html">Ofertas</a>
       <a href="../pages/sobreNosotros.html">Sobre nosotros</a>
       <a href="../pages/contacto.html">Contacto</a>
+        <a href="#" id="cart-icon" class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count" class="cart-count">0</span>
+      </a>
     </nav>
   </header>
 
@@ -31,35 +35,35 @@
         <img src="../img/taylor114.jpg" alt="Guitarra Acustica">
         <h3>Guitarra Electroacustica Taylor 114e</h3>
         <p>$1.650.000</p>
-        <button>Agregar al carrito</button>
+          <button class="add-to-cart-btn" data-product-name="Guitarra Electroacustica Taylor 114e" data-product-price="1650000">Agregar al carrito</button>
       </article>
 
       <article class="producto">
         <img src="../img/bajoFender.jpg" alt="Bajo Fender">
         <h3>Bajo Fender Precision Bass</h3>
         <p>$4.650.000</p>
-        <button>Agregar al carrito</button>
+        <button class="add-to-cart-btn" data-product-name="Bajo Fender Precision Bass" data-product-price="4650000">Agregar al carrito</button>
       </article>
 
       <article class="producto">
         <img src="../img/amplificadorHartke1.jpg" alt="Amplificador Bajo">
         <h3>Amplificador Bajo Hartke</h3>
         <p>$2.650.000</p>
-        <button>Agregar al carrito</button>
+        <button class="add-to-cart-btn" data-product-name="Amplificador Bajo Hartke" data-product-price="2650000">Agregar al carrito</button>
       </article>
 
       <article class="producto">
         <img src="../img/sintetizadorYamaha.jpg" alt="Teclado">
         <h3>Sintetizador Yamaha</h3>
         <p>$1.800.000</p>
-        <button>Agregar al carrito</button>
+        <button class="add-to-cart-btn" data-product-name="Sintetizador Yamaha" data-product-price="1800000">Agregar al carrito</button>
       </article>
 
       <article class="producto">
         <img src="../img/bateriaYamaha.jpg" alt="Batería">
         <h3>Batería Electrónica - Yamaha DD75</h3>
         <p>$600.000</p>
-        <button>Agregar al carrito</button>
+        <button class="add-to-cart-btn" data-product-name="Batería Electrónica - Yamaha DD75" data-product-price="600000">Agregar al carrito</button>
       </article>
     </section>
   </main>
@@ -73,5 +77,6 @@
       <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
   </footer>
+  <script src="../js/carrito.js"></script>
 </body>
 </html>

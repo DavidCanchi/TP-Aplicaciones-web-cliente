@@ -107,6 +107,24 @@ footer {
   background-color: #cc5200;
 }
 
+.editar-btn {
+  display: inline-block;
+  background-color: #ff6600;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.btn-editar:hover {
+  background-color: #cc5200;
+}
+
 
 .redes-sociales {
   margin-top: 1rem;
@@ -177,3 +195,34 @@ footer {
   width: 100%;
   max-width: 120px;
 }
+
+/*Estilos Carrito*/
+/* Estilos para el ícono del carrito */
+.cart-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding-bottom: 801px;
+}
+
+.cart-icon:hover {
+  color: #ff6600;
+}
+
+.cart-count {
+  background-color: #ff6600;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
