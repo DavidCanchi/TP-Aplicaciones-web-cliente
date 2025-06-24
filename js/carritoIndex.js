@@ -53,7 +53,7 @@ cartIconElement.addEventListener('click', (event) => {
         alert('Tu carrito está vacío. Agrega algunos productos antes de finalizar la compra.');
     } else {
         // Redirijo a la página de finalizar compra
-        window.location.href = '../pages/finalizar-compra.html';
+        window.location.href = './pages/finalizar-compra.html';
         
     }
 });
