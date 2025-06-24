@@ -28,46 +28,76 @@
     <p>Instrumentos para todos los niveles y estilos</p>
   </section>
 
-  
   <main>
-    <section class="productos">
-      <article class="producto">
-        <img src="../img/taylor114.jpg" alt="Guitarra Acustica">
-        <h3>Guitarra Electroacustica Taylor 114e</h3>
-        <p>$1.650.000</p>
-          <button class="add-to-cart-btn" data-product-name="Guitarra Electroacustica Taylor 114e" data-product-price="1650000">Agregar al carrito</button>
-      </article>
+    <section class="filtros-ordenamiento">
+            <div class="filtro">
+                <label for="ordenar">Ordenar por:</label>
+                <select id="ordenar">
+                    <option value="default">Por defecto</option>
+                    <option value="precioAsc">Precio: Menor a Mayor</option>
+                    <option value="precioDesc">Precio: Mayor a Menor</option>
+                </select>
+            </div>
+            <div class="filtro">
+                <label for="filtrarMarca">Filtrar por Marca:</label>
+                <select id="filtrarMarca">
+                    <option value="todos">Todas las Marcas</option>
+                    </select>
+            </div>
+        </section>
+           <section class="productos" id="lista-productos">
+            <article class="producto" data-product-price="1650000" data-product-brand="Taylor" data-product-description="Una guitarra electroacústica de alta calidad con un sonido rico y equilibrado, ideal para músicos de todos los niveles.">
+                <img src="../img/taylor114.jpg" alt="Guitarra Acustica Taylor">
+                <h3>Guitarra Electroacustica Taylor 114e</h3>
+                <p>$1.650.000</p>
+                <button class="btn-ver-detalle">Ver Detalle</button>
+                <button class="add-to-cart-btn" data-product-name="Guitarra Electroacustica Taylor 114e" data-product-price="1650000">Agregar al carrito</button>
+            </article>
 
-      <article class="producto">
-        <img src="../img/bajoFender.jpg" alt="Bajo Fender">
-        <h3>Bajo Fender Precision Bass</h3>
-        <p>$4.650.000</p>
-        <button class="add-to-cart-btn" data-product-name="Bajo Fender Precision Bass" data-product-price="4650000">Agregar al carrito</button>
-      </article>
+            <article class="producto" data-product-price="4650000" data-product-brand="Fender" data-product-description="El clásico bajo Precision Bass de Fender, conocido por su potente tono y sustain. Perfecto para rock, blues y funk.">
+                <img src="../img/bajoFender.jpg" alt="Bajo Fender">
+                <h3>Bajo Fender Precision Bass</h3>
+                <p>$4.650.000</p>
+                <button class="btn-ver-detalle">Ver Detalle</button>
+                <button class="add-to-cart-btn" data-product-name="Bajo Fender Precision Bass" data-product-price="4650000">Agregar al carrito</button>
+            </article>
 
-      <article class="producto">
-        <img src="../img/amplificadorHartke1.jpg" alt="Amplificador Bajo">
-        <h3>Amplificador Bajo Hartke</h3>
-        <p>$2.650.000</p>
-        <button class="add-to-cart-btn" data-product-name="Amplificador Bajo Hartke" data-product-price="2650000">Agregar al carrito</button>
-      </article>
+            <article class="producto" data-product-price="2650000" data-product-brand="Hartke" data-product-description="Amplificador potente y versátil para bajos, con una ecualización flexible y gran respuesta de bajos.">
+                <img src="../img/amplificadorHartke1.jpg" alt="Amplificador Bajo Hartke">
+                <h3>Amplificador Bajo Hartke</h3>
+                <p>$2.650.000</p>
+                <button class="btn-ver-detalle">Ver Detalle</button>
+                <button class="add-to-cart-btn" data-product-name="Amplificador Bajo Hartke" data-product-price="2650000">Agregar al carrito</button>
+            </article>
 
-      <article class="producto">
-        <img src="../img/sintetizadorYamaha.jpg" alt="Teclado">
-        <h3>Sintetizador Yamaha</h3>
-        <p>$1.800.000</p>
-        <button class="add-to-cart-btn" data-product-name="Sintetizador Yamaha" data-product-price="1800000">Agregar al carrito</button>
-      </article>
+            <article class="producto" data-product-price="1800000" data-product-brand="Yamaha" data-product-description="Un sintetizador Yamaha ideal para producción musical y actuaciones en vivo, con una amplia gama de sonidos.">
+                <img src="../img/sintetizadorYamaha.jpg" alt="Teclado Yamaha">
+                <h3>Sintetizador Yamaha</h3>
+                <p>$1.800.000</p>
+                <button class="btn-ver-detalle">Ver Detalle</button>
+                <button class="add-to-cart-btn" data-product-name="Sintetizador Yamaha" data-product-price="1800000">Agregar al carrito</button>
+            </article>
 
-      <article class="producto">
-        <img src="../img/bateriaYamaha.jpg" alt="Batería">
-        <h3>Batería Electrónica - Yamaha DD75</h3>
-        <p>$600.000</p>
-        <button class="add-to-cart-btn" data-product-name="Batería Electrónica - Yamaha DD75" data-product-price="600000">Agregar al carrito</button>
-      </article>
-    </section>
-  </main>
+            <article class="producto" data-product-price="600000" data-product-brand="Yamaha" data-product-description="Batería electrónica compacta y con gran sonido, perfecta para practicar en casa o para presentaciones pequeñas.">
+                <img src="../img/bateriaYamaha.jpg" alt="Batería Yamaha">
+                <h3>Batería Electrónica - Yamaha DD75</h3>
+                <p>$600.000</p>
+                <button class="btn-ver-detalle">Ver Detalle</button>
+                <button class="add-to-cart-btn" data-product-name="Batería Electrónica - Yamaha DD75" data-product-price="600000">Agregar al carrito</button>
+            </article>
+        </section>
+    </main>
 
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img id="modal-img" src="" alt="Imagen del Producto">
+            <h3 id="modal-title"></h3>
+            <p id="modal-price"></p>
+            <p id="modal-description"></p>
+            <button id="modal-add-to-cart-btn" class="add-to-cart-btn">Agregar al carrito</button>
+        </div>
+    </div>
   <footer>
     <p>&copy; CLAVE DE SOL - INSTRUMENTOS MUSICALES - Todos los derechos reservados</p>
     <div class="redes-sociales">
@@ -78,5 +108,6 @@
     </div>
   </footer>
   <script src="../js/carrito.js"></script>
+   <script src="../js/instrumentos.js"></script>
 </body>
 </html>
