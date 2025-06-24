@@ -32,11 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
     completePurchaseButton.addEventListener('click', () => {
         if (cart.length > 0) {
             alert('¡Compra realizada con éxito! Gracias por tu compra.');
-            localStorage.removeItem('cart'); // Limpiar el carrito después de la compra
+            localStorage.removeItem('cart'); // Limpio el carrito después de la compra
             cart = [];
-            displayCartSummary(); // Actualizar la vista del carrito
-            // Opcional: redirigir a una página de confirmación
-            // window.location.href = '../index.html'; 
+            displayCartSummary(); // Actualizo vista del carrito            
         } else {
             alert('Tu carrito está vacío. Agrega productos antes de confirmar la compra.');
         }
