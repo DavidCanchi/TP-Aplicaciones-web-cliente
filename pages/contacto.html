@@ -29,33 +29,24 @@
   </section>
 
   <main>
+ 
     <section>
-      <h2>Información de contacto</h2>
-      <p><strong>Email:</strong> contacto@clavedesol.com.ar</p>
-      <p><strong>Teléfono:</strong> +54 11 1234 5678</p>
-      <p><strong>Dirección Casa Central:</strong> Av. Corrientes 1234, CABA, Buenos Aires, Argentina</p>
-    </section>
-
-    <section>
-      <h2>Sucursales</h2>
-      <ul>
-        <li><strong>Rosario:</strong> Bv. Oroño 2345</li>
-        <li><strong>Córdoba:</strong> Av. Colón 4567</li>
-        <li><strong>Mendoza:</strong> Calle San Martín 789</li>
-      </ul>
-    </section>
-    <section>
-      <h2>DEJANOS TU CONSULTA</h2>
+     <!-- <h2 id="consulta">DEJANOS TU CONSULTA</h2>-->
       <form id="formulario" method="post" action="#" onsubmit="return validarFormulario()" >
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" required><br><br>
-  
-        <label for="email">Correo electrónico:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-  
-        <label for="mensaje">Mensaje:</label><br>
-        <textarea id="mensaje" name="mensaje" rows="5" required></textarea><br><br>
-  
+          <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
         <button type="submit">Enviar consulta</button>
       </form>
       <p id="mensaje-exito" style="color: green; display: none;">¡Consulta enviada con éxito! Nos pondremos en contacto pronto.</p>
@@ -63,13 +54,32 @@
   </main>
   
   <footer>
-    <p>&copy; CLAVE DE SOL - INSTRUMENTOS MUSICALES - Todos los derechos reservados</p>
+    
     <div class="redes-sociales">
       <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
       <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
       <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
+
+    <div class="footer-info-container"> 
+      <section class="contacto-footer-info"> 
+        <h2>Información de contacto</h2>
+        <p><strong>Email:</strong> contacto@clavedesol.com.ar</p>
+        <p><strong>Teléfono:</strong> +54 11 1234 5678</p>
+        <p><strong>Dirección Casa Central:</strong> Av. Corrientes 1234, CABA, Buenos Aires, Argentina</p>
+      </section>
+
+     <section class="sucursales-footer-info"> 
+      <h2>Sucursales</h2>
+        <ul>
+          <li><strong>Rosario:</strong> Bv. Oroño 2345</li>
+          <li><strong>Córdoba:</strong> Av. Colón 4567</li>
+          <li><strong>Mendoza:</strong> Calle San Martín 789</li>
+        </ul>
+     </section>
+    </div> 
+    <p>&copy; CLAVE DE SOL - INSTRUMENTOS MUSICALES - Todos los derechos reservados</p>
   </footer>
   <script src="../js/funciones.js"></script>
   <script src="../js/carrito.js"></script>
