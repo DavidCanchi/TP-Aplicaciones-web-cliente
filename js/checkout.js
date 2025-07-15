@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         displayCartSummary(); // Vuelve a renderizar el resumen del carrito para reflejar el cambio
     }
 
-    function displayCartSummary() {
+/*    function displayCartSummary() {
         cartSummaryElement.innerHTML = ''; // Limpia el contenido actual
         let total = 0;
 
@@ -53,7 +53,73 @@ document.addEventListener('DOMContentLoaded', () => {
                 removeItemFromCart(indexToRemove); // llamo a la función de eliminar
             });
         });
+    }*/
+   function displayCartSummary() {
+    cartSummaryElement.innerHTML = '';
+    let total = 0;
+
+    if (cart.length === 0) {
+        cartSummaryElement.innerHTML = '<p>No hay productos en el carrito.</p>';
+        totalPriceElement.textContent = '$0';
+        completePurchaseButton.disabled = true;
+        return;
     }
+
+    completePurchaseButton.disabled = false;
+
+    cart.forEach((product, index) => {
+        const subtotal = product.price * product.quantity;
+        const productDiv = document.createElement('div');
+        productDiv.classList.add('checkout-product-item');
+
+        productDiv.innerHTML = `
+            <p>${product.name} - $${product.price.toLocaleString('es-AR')}</p>
+            <div class="quantity-control">
+                <button class="decrease-qty" data-index="${index}">-</button>
+                <span>Cantidad: ${product.quantity}</span>
+                <button class="increase-qty" data-index="${index}">+</button>
+            </div>
+            <p>Subtotal: $${subtotal.toLocaleString('es-AR')}</p>
+            <button class="remove-item-btn" data-index="${index}">Eliminar</button>
+        `;
+
+        cartSummaryElement.appendChild(productDiv);
+        total += subtotal;
+    });
+
+    totalPriceElement.textContent = `$${total.toLocaleString('es-AR')}`;
+
+    document.querySelectorAll('.remove-item-btn').forEach(button => {
+        button.addEventListener('click', (event) => {
+            const index = parseInt(event.target.dataset.index);
+            removeItemFromCart(index);
+        });
+    });
+
+    document.querySelectorAll('.increase-qty').forEach(button => {
+        button.addEventListener('click', (event) => {
+            const index = parseInt(event.target.dataset.index);
+            cart[index].quantity++;
+            saveCartToLocalStorage();
+            displayCartSummary();
+        });
+    });
+
+    document.querySelectorAll('.decrease-qty').forEach(button => {
+        button.addEventListener('click', (event) => {
+            const index = parseInt(event.target.dataset.index);
+            if (cart[index].quantity > 1) {
+                cart[index].quantity--;
+            } else {
+                removeItemFromCart(index);
+                return;
+            }
+            saveCartToLocalStorage();
+            displayCartSummary();
+        });
+    });
+}
+
 
     completePurchaseButton.addEventListener('click', () => {
         if (cart.length > 0) {

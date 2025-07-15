@@ -517,3 +517,28 @@ footer a {
 header {
     position: relative; 
 }
+
+.checkout-product-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px 0;
+}
+
+.quantity-control button {
+    padding: 4px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.total-final {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
